@@ -8,7 +8,6 @@ using Speckle.Core.Credentials;
 [TestFixture]
 public sealed class AutomationContextTest : IDisposable
 {
-
   private Client client;
   private Account account;
 
@@ -18,7 +17,10 @@ public sealed class AutomationContextTest : IDisposable
     account = new Account
     {
       token = TestAutomateEnvironment.GetSpeckleToken(),
-      serverInfo = new ServerInfo { url = TestAutomateEnvironment.GetSpeckleServerUrl().ToString() }
+      serverInfo = new ServerInfo
+      {
+        url = TestAutomateEnvironment.GetSpeckleServerUrl().ToString()
+      }
     };
     client = new Client(account);
   }

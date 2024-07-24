@@ -17,14 +17,19 @@ public static class AutomateFunction
 
     Console.WriteLine("Received version: " + commitObject);
 
+    Console.WriteLine(commitObject.TryGetName());
+
     var count = commitObject
       .Flatten()
       .Count(b => b.speckle_type == functionInputs.SpeckleTypeToCount);
 
     Console.WriteLine($"Counted {count} objects");
 
-    if (count < functionInputs.SpeckleTypeTargetCount) {
-      automationContext.MarkRunFailed($"Counted {count} objects where {functionInputs.SpeckleTypeTargetCount} were expected");
+    if (count < functionInputs.SpeckleTypeTargetCount)
+    {
+      automationContext.MarkRunFailed(
+        $"Counted {count} objects where {functionInputs.SpeckleTypeTargetCount} were expected"
+      );
       return;
     }
 

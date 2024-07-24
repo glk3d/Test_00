@@ -1,6 +1,6 @@
-using Speckle.Automate.Sdk.DataAnnotations;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Speckle.Automate.Sdk.DataAnnotations;
 
 /// <summary>
 /// This class describes the user specified variables that the function wants to work with.
