@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Rhino3dm" Version="8.9.0" />
     <PackageReference Include="Speckle.Automate.Sdk" Version="2.19.2" />
     <PackageReference Include="Speckle.Objects" Version="2.19.2" />
   </ItemGroup>

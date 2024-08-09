@@ -6,12 +6,6 @@ using Speckle.Automate.Sdk.Test;
 using Speckle.Core.Api;
 using Speckle.Core.Credentials;
 
-
-/*
-  cd38d517485dfce646e20af2ac69486284b1eb7cd6
-  af744e71e84e9a9c69d8f6edc57ee15288933ef965
-*/
-
 [TestFixture]
 public sealed class AutomationContextTest : IDisposable
 {
@@ -40,7 +34,7 @@ public sealed class AutomationContextTest : IDisposable
     {
         var inputs = new FunctionInputs
         {
-            SpeckleTypeToCount = "Base",
+            SpeckleTypeToCount = "Objects.Structural.Geometry.Element1D",
             SpeckleTypeTargetCount = 1,
             ExternalServiceKey = "FÜNF",
         };
